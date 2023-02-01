@@ -9,6 +9,7 @@
 TEST_CASE("array_queue")
 {
     Array_int_queue test(10);
+    REQUIRE(test.empty() == true);
     test.enqueue(99);
     test.enqueue(4);
     test.enqueue(-5);
