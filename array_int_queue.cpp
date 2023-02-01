@@ -22,7 +22,7 @@ int Array_int_queue::dequeue()
 {
     assert(front > 0);
     front--;
-    return queue[front]
+    return queue[front];
 }
 
 bool Array_int_queue::empty() 
