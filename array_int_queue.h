@@ -6,6 +6,9 @@
 class Array_int_queue : public Int_queue
 {
 private:
+    int *queue;
+    int max;
+    int top;
 
 public:
     void enqueue(int) override;
