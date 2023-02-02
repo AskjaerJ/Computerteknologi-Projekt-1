@@ -24,12 +24,7 @@ int List_int_queue::dequeue()
 
 bool List_int_queue::empty() 
 {
-   if(q->size == 0) {
-    return 1;
-   }
-   else {
-    return 0;
-   }
+   
 }
 
 bool List_int_queue::full() 
