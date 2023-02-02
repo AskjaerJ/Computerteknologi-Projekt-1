@@ -3,6 +3,15 @@
 
 #include "int_queue.h"
 
+
+class Q_node
+{
+public:
+    int data;
+    Q_node *next; 
+    ~Q_node();
+};
+
 class List_int_queue : public Int_queue
 {
 private:
@@ -19,12 +28,6 @@ public:
     ~List_int_queue();
 };
 
-class Q_node
-{
-public:
-    int data;
-    Q_node *next; 
-    ~Q_node();
-};
+
 
 #endif

@@ -11,7 +11,7 @@ List_int_queue::List_int_queue()
 
 void List_int_queue::enqueue(int x)
 {
-    qnode *new_qnode; /**/
+    qnode new_qnode(); 
     new_qnode->data = x;
 
     if (size == 0)
