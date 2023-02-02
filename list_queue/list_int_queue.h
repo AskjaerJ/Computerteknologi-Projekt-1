@@ -22,7 +22,7 @@ public:
     int dequeue() override;
     bool empty() override;
     bool full() override;
-    List_int_queue(int);
+    List_int_queue();
     ~List_int_queue();
 };
 
