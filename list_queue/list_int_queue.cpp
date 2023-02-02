@@ -1,40 +1,38 @@
 #include "list_int_queue.h"
 #include "assert.h"
+#include "stdlib.h"
 
-List_int_queue::List_int_queue(queue *q)
+
+List_int_queue::List_int_queue()
 {
-    q->front = NULL;
+    queue *q = (queue *)malloc(sizeof(queue));
     q->size = 0;
     q->front = NULL;
+    q->rear = NULL;
 }
 
 void List_int_queue::enqueue(int x)
 {
-    assert(front < max);
-    for (int i = front-1; i >= 0; i--) {
-        queue[i+1] = queue[i];
-    }
-    queue[0] = x;
-    front++;
+
+   
 }
 
 int List_int_queue::dequeue() 
 {
-    assert(front > 0);
-    front--;
-    return queue[front];
+  
 }
 
 bool List_int_queue::empty() 
 {
-    return 
+   
 }
 
 bool List_int_queue::full() 
 {
-    return front == max;
+   return false; //Queue is never full
 }
 
-List_int_queue::~List_int_queue() {
+List_int_queue::~List_int_queue()
+{
     delete queue;
 }
