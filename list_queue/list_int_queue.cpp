@@ -11,10 +11,10 @@ List_int_queue::List_int_queue()
 
 void List_int_queue::enqueue(int x)
 {
-    qnode new_qnode(); 
+    Q_node new_qnode; 
     new_qnode->data = x;
 
-    if (q->size == 0)
+    if (size == 0)
     { /*both front and rear must be new node*/
         q->front = new_qnode;
         q->rear = new_qnode;
