@@ -11,8 +11,8 @@ List_int_queue::List_int_queue()
 
 void List_int_queue::enqueue(int x)
 {
-    Q_node new_qnode; 
-    new_qnode.data = x;
+    Q_node *new_qnode; 
+    new_qnode->data = x;
 
     if (size == 0)
     { /*both front and rear must be new node*/
@@ -30,13 +30,10 @@ void List_int_queue::enqueue(int x)
 
 int List_int_queue::dequeue()
 {
-    assert(q->size > 0);
-    int x = q->front->data; /*saves data to be returned*/
-    qnode *temp = q->front; /*temporary qnode pointer to hold node to be freed*/
+    assert(size > 0);
+    int x = front->data; /*saves data to be returned*/
 
-    front = q->front->next; /*sets new front*/
-
-    free(temp); /*to avoid memory leak*/
+    front = front->next; /*sets new front*/
 
     size--;
 
@@ -55,5 +52,5 @@ bool List_int_queue::full()
 
 List_int_queue::~List_int_queue()
 {
-    delete q;
+    
 }
