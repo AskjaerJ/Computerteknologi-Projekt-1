@@ -32,3 +32,8 @@ TEST_CASE("array_queue")
     test.enqueue(99);
     REQUIRE(test.full() == true);
 }
+
+TEST_CASE("array_queue")
+{
+    
+}

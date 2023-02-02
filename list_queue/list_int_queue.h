@@ -19,6 +19,8 @@ typedef struct queue
   qnode *rear;
 } queue;
 
+queue *q;
+
 public:
     void enqueue(int) override;
     int dequeue() override;
