@@ -6,9 +6,16 @@
 class List_int_queue : public Int_queue
 {
 private:
-    int *queue;
-    int max;
-    int front;
+    typedef struct node
+{
+  int data;
+  struct node *next;
+} node_t;
+
+typedef struct
+{
+  node_t *head;
+} linked_list;
 
 public:
     void enqueue(int) override;
