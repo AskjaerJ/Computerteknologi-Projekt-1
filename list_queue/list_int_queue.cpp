@@ -17,20 +17,18 @@ Q_node::Q_node(int n)
 
 void List_int_queue::enqueue(int x)
 {
-    Q_node new_qnode;
-    new_qnode.data = x;
-    Q_node *ptr_qnode = &new_qnode;
+    Q_node new_qnode(x);
+    Q_node *ptr_new_qnode = &new_qnode;
     
-
     if (size == 0)
     { /*both front and rear must be new node*/
-        front = ptr_qnode;
-        rear = ptr_qnode;
+        front = ptr_new_qnode;
+        rear = ptr_new_qnode;
     }
     else
     {
-        rear->next = ptr_qnode; /*includes new node in queue*/
-        rear = ptr_qnode;       /*updates rear to be newly inserted node*/
+        rear->next = ptr_new_qnode; /*includes new node in queue*/
+        rear = ptr_new_qnode;       /*updates rear to be newly inserted node*/
     }
 
     size++;
@@ -58,7 +56,3 @@ bool List_int_queue::full()
     return false; // Queue is never full
 }
 
-List_int_queue::~List_int_queue()
-{
-
-}
