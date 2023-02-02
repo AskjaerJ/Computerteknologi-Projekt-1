@@ -36,27 +36,27 @@ TEST_CASE("array_queue")
 
 TEST_CASE("list_queue")
 {
-    List_int_queue test2();
+    List_int_queue test2;
     REQUIRE(test2.empty() == true);
     test2.enqueue(99);
     test2.enqueue(4);
     test2.enqueue(-5);
-    REQUIRE(test.dequeue() == 99);
-    REQUIRE(test.dequeue() == 4);
-    REQUIRE(test.dequeue() == -5);
-    REQUIRE(test.empty() == true);
+    REQUIRE(test2.dequeue() == 99);
+    REQUIRE(test2.dequeue() == 4);
+    REQUIRE(test2.dequeue() == -5);
+    REQUIRE(test2.empty() == true);
 
     /*Fills up queue*/
-    test.enqueue(99);
-    test.enqueue(4);
-    test.enqueue(-5);
-    test.enqueue(99);
-    test.enqueue(4);
-    test.enqueue(-5);
-    test.enqueue(99);
-    test.enqueue(4);
-    test.enqueue(-5);
-    REQUIRE(test.full() == false);
-    test.enqueue(99);
-    REQUIRE(test.full() == true);
+    test2.enqueue(99);
+    test2.enqueue(4);
+    test2.enqueue(-5);
+    test2.enqueue(99);
+    test2.enqueue(4);
+    test2.enqueue(-5);
+    test2.enqueue(99);
+    test2.enqueue(4);
+    test2.enqueue(-5);
+    REQUIRE(test2.full() == false);
+    test2.enqueue(99);
+    REQUIRE(test2.full() == true);
 }

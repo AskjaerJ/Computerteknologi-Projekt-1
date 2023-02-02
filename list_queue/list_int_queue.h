@@ -6,20 +6,9 @@
 class List_int_queue : public Int_queue
 {
 private:
-  typedef struct qnode
-{
-  int data;
-  struct qnode *next;
-} qnode;
-
-typedef struct queue
-{
-  int size;
-  qnode *front;
-  qnode *rear;
-} queue;
-
-queue *q;
+    Q_node *front;
+    Q_node *rear;
+    int size;
 
 public:
     void enqueue(int) override;
@@ -28,6 +17,14 @@ public:
     bool full() override;
     List_int_queue();
     ~List_int_queue();
+};
+
+class Q_node
+{
+public:
+    int data;
+    Q_node *next; 
+    ~Q_node();
 };
 
 #endif

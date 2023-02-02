@@ -4,15 +4,14 @@
 
 List_int_queue::List_int_queue()
 {
-    queue *q = (queue *)malloc(sizeof(queue));
-    q->size = 0;
-    q->front = NULL;
-    q->rear = NULL;
+    size = 0;
+    front = NULL;
+    rear = NULL;
 }
 
 void List_int_queue::enqueue(int x)
 {
-    qnode *new_qnode = (qnode *)malloc(sizeof(qnode)); /**/
+    qnode *new_qnode; /**/
     new_qnode->data = x;
 
     if (q->size == 0)
