@@ -9,12 +9,13 @@ class Q_node
 public:
     int data;
     Q_node *next; 
-    ~Q_node();
+    Q_node(int);
 };
 
 class List_int_queue : public Int_queue
 {
 private:
+    List_int_queue *queue;
     Q_node *front;
     Q_node *rear;
     int size;
