@@ -6,23 +6,25 @@
 class List_int_queue : public Int_queue
 {
 private:
-    typedef struct node
+  typedef struct qnode
 {
   int data;
-  struct node *next;
-} node_t;
+  struct qnode *next;
+} qnode;
 
-typedef struct
+typedef struct queue
 {
-  node_t *head;
-} linked_list;
+  int size;
+  qnode *front;
+  qnode *rear;
+} queue;
 
 public:
     void enqueue(int) override;
     int dequeue() override;
     bool empty() override;
     bool full() override;
-    List_int_queue(int);
+    List_int_queue();
     ~List_int_queue();
 };
 

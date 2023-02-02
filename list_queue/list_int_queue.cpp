@@ -1,11 +1,11 @@
 #include "list_int_queue.h"
 #include "assert.h"
 
-List_int_queue::List_int_queue(int size)
+List_int_queue::List_int_queue(queue *q)
 {
-    queue = new int[size];
-    max = size;
-    front = 0;
+    q->front = NULL;
+    q->size = 0;
+    q->front = NULL;
 }
 
 void List_int_queue::enqueue(int x)
@@ -27,7 +27,7 @@ int List_int_queue::dequeue()
 
 bool List_int_queue::empty() 
 {
-    return front > 0;
+    return 
 }
 
 bool List_int_queue::full() 
