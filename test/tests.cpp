@@ -36,11 +36,11 @@ TEST_CASE("array_queue")
 
 TEST_CASE("list_queue")
 {
-    List_int_queue test(10);
-    REQUIRE(test.empty() == true);
-    test.enqueue(99);
-    test.enqueue(4);
-    test.enqueue(-5);
+    List_int_queue test2();
+    REQUIRE(test2.empty() == true);
+    test2.enqueue(99);
+    test2.enqueue(4);
+    test2.enqueue(-5);
     REQUIRE(test.dequeue() == 99);
     REQUIRE(test.dequeue() == 4);
     REQUIRE(test.dequeue() == -5);
