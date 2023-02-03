@@ -17,8 +17,7 @@ Q_node::Q_node(int n)
 
 void List_int_queue::enqueue(int x)
 {
-    Q_node new_qnode(x);
-    Q_node *ptr_new_qnode = &new_qnode;
+    Q_node *ptr_new_qnode = new Q_node(x);
     
     if (size == 0)
     { /*both front and rear must be new node*/

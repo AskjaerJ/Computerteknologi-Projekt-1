@@ -58,5 +58,5 @@ TEST_CASE("list_queue")
     test2.enqueue(-5);
     REQUIRE(test2.full() == false);
     test2.enqueue(99);
-    REQUIRE(test2.full() == true);
+    REQUIRE(test2.full() == false);
 }

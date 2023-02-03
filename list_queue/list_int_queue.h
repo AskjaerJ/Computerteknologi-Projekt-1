@@ -15,7 +15,6 @@ public:
 class List_int_queue : public Int_queue
 {
 private:
-    List_int_queue *queue;
     Q_node *front;
     Q_node *rear;
     int size;
